@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SkinMC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="logo"><img class="logo-icon" src="data:image/png;base64,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" alt="SkinMC logo"><span class="skin-part">SKIN</span><span>MC</span></div>
+    <div class="topbar-right">
+      <div class="topbar-sub" id="topbar-sub">Explore</div>
+      <button class="account-btn" id="account-btn" aria-label="Account">
+        <span class="account-avatar-wrap" id="account-avatar-wrap">
+          <svg id="account-icon-default" viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+            <rect class="icon-fill" x="3" y="0" width="2" height="2"/>
+            <rect class="icon-fill" x="2" y="1" width="4" height="2"/>
+            <rect class="icon-fill" x="1" y="3" width="6" height="1"/>
+            <rect class="icon-fill" x="0" y="4" width="8" height="3"/>
+          </svg>
+          <img id="account-avatar-img" class="account-avatar-img hidden" alt="">
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HOME VIEW ============ -->
+  <main class="view active" id="view-home">
+    <div class="home-hero">
+      <div class="home-hero-title">
+        <span class="line">FIND THE SKIN</span>
+        <span class="line accent">YOU'VE BEEN LOOKING FOR</span>
+      </div>
+      <p class="home-hero-desc">Browse community-made Minecraft skins, or publish your own for the world to download.</p>
+      <div class="home-hero-stats">
+        <div class="hero-chip">
+          <div class="hero-chip-icon hero-chip-icon-green">
+            <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+              <rect class="icon-fill" x="2" y="0" width="4" height="1"/>
+              <rect class="icon-fill" x="1" y="1" width="6" height="1"/>
+              <rect class="icon-fill" x="0" y="2" width="8" height="4"/>
+              <rect class="icon-fill" x="1" y="6" width="6" height="1"/>
+              <rect class="icon-fill" x="2" y="7" width="4" height="1"/>
+            </svg>
+          </div>
+          <div>
+            <span class="hero-chip-num" id="hero-skins-count">0</span>
+            <span class="hero-chip-label">SKINS CREATED</span>
+          </div>
+        </div>
+        <div class="hero-chip">
+          <div class="hero-chip-icon hero-chip-icon-gold">
+            <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+              <rect class="icon-fill" x="3" y="0" width="2" height="4"/>
+              <rect class="icon-fill" x="1" y="3" width="6" height="1"/>
+              <rect class="icon-fill" x="2" y="4" width="4" height="1"/>
+              <rect class="icon-fill" x="3" y="5" width="2" height="1"/>
+              <rect class="icon-fill" x="0" y="7" width="8" height="1"/>
+            </svg>
+          </div>
+          <div>
+            <span class="hero-chip-num" id="hero-downloads-count">0</span>
+            <span class="hero-chip-label">DOWNLOADS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">EXPLORE SKINS <span class="count" id="home-count"></span></div>
+    <p class="empty-msg" id="home-empty">
+      No skins here yet.<br>Head to Publish and post the first one.
+    </p>
+    <div class="feed-grid" id="home-feed"></div>
+  </main>
+
+  <!-- ============ SEARCH VIEW ============ -->
+  <main class="view" id="view-search">
+    <div class="section-title">SEARCH SKINS</div>
+    <div class="search-wrap">
+      <input type="text" id="search-input" placeholder="Type a skin name..." autocomplete="off">
+    </div>
+    <p class="empty-msg" id="search-prompt">
+      Start typing to search the skin library.
+    </p>
+    <p class="empty-msg hidden" id="search-empty">
+      No skins found. Try a different name.
+    </p>
+    <div class="feed-grid hidden" id="search-results"></div>
+  </main>
+
+  <!-- ============ PUBLISH VIEW ============ -->
+  <main class="view" id="view-publish">
+    <div class="section-title">PUBLISH A SKIN</div>
+
+    <div class="auth-gate hidden" id="publish-auth-gate">
+      <p class="empty-msg">Sign in or sign up to publish a skin.</p>
+      <button class="btn btn-block" id="publish-auth-btn">SIGN IN / SIGN UP</button>
+    </div>
+
+    <form id="publish-form" class="hidden">
+      <div class="field">
+        <label for="skin-name-input">Name (required)</label>
+        <input type="text" id="skin-name-input" placeholder="e.g. Frost Wanderer" maxlength="40" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="skin-desc-input">Description (optional)</label>
+        <textarea id="skin-desc-input" placeholder="Tell people about your skin..." maxlength="200"></textarea>
+      </div>
+      <div class="field">
+        <label>Skin image (PNG, 64x64 or 64x32)</label>
+        <div class="upload-box" id="upload-box">
+          <div class="upload-preview hidden-preview" id="upload-preview">
+            <img id="upload-preview-img" alt="Skin preview">
+          </div>
+          <label class="upload-label" for="skin-file-input">CHOOSE PNG FILE</label>
+          <input type="file" id="skin-file-input" accept="image/png">
+          <div class="field-hint" id="upload-hint">No file selected.</div>
+          <div class="field-error hidden" id="upload-error"></div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button type="submit" class="btn btn-block" id="publish-submit-btn" disabled>PUBLISH</button>
+        <button type="button" class="btn btn-secondary" id="reset-publish-btn">RESET</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- ============ BOTTOM NAV ============ -->
+  <nav class="bottomnav">
+    <button class="navbtn active" data-tab="home" aria-label="Home">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+        <rect class="icon-fill" x="3" y="0" width="2" height="1"/>
+        <rect class="icon-fill" x="2" y="1" width="4" height="1"/>
+        <rect class="icon-fill" x="1" y="2" width="6" height="1"/>
+        <rect class="icon-fill" x="1" y="3" width="6" height="4"/>
+        <rect x="3" y="5" width="2" height="2" fill="#0c0c0c"/>
+      </svg>
+      HOME
+    </button>
+    <button class="navbtn" data-tab="search" aria-label="Search">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+        <rect class="icon-fill" x="0" y="0" width="5" height="5"/>
+        <rect x="1" y="1" width="3" height="3" fill="#0c0c0c"/>
+        <rect class="icon-fill" x="5" y="5" width="1" height="1"/>
+        <rect class="icon-fill" x="6" y="6" width="1" height="1"/>
+        <rect class="icon-fill" x="7" y="7" width="1" height="1"/>
+      </svg>
+      SEARCH
+    </button>
+    <button class="navbtn" data-tab="publish" aria-label="Publish">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+        <rect class="icon-fill" x="3" y="0" width="2" height="8"/>
+        <rect class="icon-fill" x="0" y="3" width="8" height="2"/>
+      </svg>
+      PUBLISH
+    </button>
+  </nav>
+
+</div>
+
+<!-- ============ DETAIL OVERLAY ============ -->
+<div class="overlay" id="detail-overlay">
+  <div class="overlay-inner">
+    <div class="overlay-top">
+      <button class="close-btn" id="detail-close-btn">CLOSE</button>
+    </div>
+
+    <div class="overlay-body">
+      <div class="detail-thumb" id="detail-thumb"></div>
+      <div class="overlay-info">
+        <div class="detail-name" id="detail-name"></div>
+        <div class="detail-desc" id="detail-desc"></div>
+
+        <div class="stats-row">
+          <button class="stat-btn" id="like-btn">
+            <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="currentColor" x="3" y="1" width="2" height="1"/>
+              <rect fill="currentColor" x="2" y="2" width="4" height="1"/>
+              <rect fill="currentColor" x="1" y="3" width="6" height="1"/>
+              <rect fill="currentColor" x="3" y="4" width="2" height="3"/>
+            </svg>
+            <span class="stat-num" id="like-count">0</span>
+          </button>
+          <button class="stat-btn" id="dislike-btn">
+            <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="currentColor" x="3" y="6" width="2" height="1"/>
+              <rect fill="currentColor" x="2" y="5" width="4" height="1"/>
+              <rect fill="currentColor" x="1" y="4" width="6" height="1"/>
+              <rect fill="currentColor" x="3" y="1" width="2" height="3"/>
+            </svg>
+            <span class="stat-num" id="dislike-count">0</span>
+          </button>
+        </div>
+
+        <div class="download-row">
+          <div class="download-count-box">
+            <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="currentColor" x="3" y="0" width="2" height="4"/>
+              <rect fill="currentColor" x="1" y="3" width="6" height="1"/>
+              <rect fill="currentColor" x="2" y="4" width="4" height="1"/>
+              <rect fill="currentColor" x="3" y="5" width="2" height="1"/>
+              <rect fill="currentColor" x="0" y="7" width="8" height="1"/>
+            </svg>
+            <span class="stat-num" id="download-count">0</span>
+          </div>
+        </div>
+        <button class="btn btn-block" id="download-btn">
+          <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="currentColor" x="3" y="0" width="2" height="4"/>
+            <rect fill="currentColor" x="1" y="3" width="6" height="1"/>
+            <rect fill="currentColor" x="2" y="4" width="4" height="1"/>
+            <rect fill="currentColor" x="3" y="5" width="2" height="1"/>
+            <rect fill="currentColor" x="0" y="7" width="8" height="1"/>
+          </svg>
+          <span id="download-btn-label">DOWNLOAD</span>
+        </button>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;">
+      <div class="comments-title">COMMENTS <span id="comment-count-label"></span></div>
+      <div id="comments-list"></div>
+      <div class="comment-input-row">
+        <input type="text" id="comment-input" placeholder="Add a comment..." maxlength="200" autocomplete="off">
+        <button class="btn btn-small" id="comment-submit-btn">POST</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AUTH OVERLAY ============ -->
+<div class="overlay" id="auth-overlay">
+  <div class="auth-overlay-inner">
+    <div class="overlay-top">
+      <button class="close-btn" id="auth-close-btn">CLOSE</button>
+    </div>
+
+    <!-- logged-out: sign in / sign up -->
+    <div id="auth-logged-out">
+      <div class="auth-header">
+        <div class="auth-header-icon">
+          <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+            <rect class="icon-fill" x="3" y="0" width="2" height="2"/>
+            <rect class="icon-fill" x="2" y="1" width="4" height="2"/>
+            <rect class="icon-fill" x="1" y="3" width="6" height="1"/>
+            <rect class="icon-fill" x="0" y="4" width="8" height="3"/>
+          </svg>
+        </div>
+        <div class="auth-header-title" id="auth-header-title">WELCOME BACK</div>
+        <div class="auth-header-sub" id="auth-header-sub">Sign in to like, download &amp; publish skins</div>
+      </div>
+
+      <div class="auth-gate-message hidden" id="auth-modal-message"></div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-auth-tab="signin">SIGN IN</button>
+        <button class="auth-tab" data-auth-tab="signup">SIGN UP</button>
+      </div>
+
+      <form class="auth-form active" id="signin-form">
+        <div class="field">
+          <label for="signin-username">Username</label>
+          <input type="text" id="signin-username" maxlength="20" autocomplete="username" placeholder="Your username">
+        </div>
+        <div class="field pw-field">
+          <label for="signin-password">Password</label>
+          <input type="password" id="signin-password" maxlength="64" autocomplete="current-password" placeholder="Your password">
+          <button type="button" class="pw-toggle" data-pw-target="signin-password">SHOW</button>
+        </div>
+        <div class="auth-error" id="signin-error"></div>
+        <button type="submit" class="btn btn-block" id="signin-submit-btn">SIGN IN</button>
+        <div class="auth-switch">New here? <button type="button" data-auth-tab="signup">Create an account</button></div>
+      </form>
+
+      <form class="auth-form" id="signup-form">
+        <div class="field">
+          <label for="signup-username">Username</label>
+          <input type="text" id="signup-username" maxlength="20" autocomplete="username" placeholder="3-20 chars, letters/numbers/_">
+        </div>
+        <div class="field pw-field">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" maxlength="64" autocomplete="new-password" placeholder="At least 4 characters">
+          <button type="button" class="pw-toggle" data-pw-target="signup-password">SHOW</button>
+        </div>
+        <div class="field">
+          <label>Profile picture (optional)</label>
+          <div class="avatar-picker">
+            <label class="avatar-picker-preview" for="signup-avatar-input">
+              <span class="avatar-picker-preview-inner" id="signup-avatar-preview">
+                <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="icon-fill" x="3" y="0" width="2" height="2"/>
+                  <rect class="icon-fill" x="2" y="1" width="4" height="2"/>
+                  <rect class="icon-fill" x="1" y="3" width="6" height="1"/>
+                  <rect class="icon-fill" x="0" y="4" width="8" height="3"/>
+                </svg>
+                <img id="signup-avatar-preview-img" class="hidden" alt="">
+              </span>
+              <span class="avatar-picker-badge">
+                <svg viewBox="0 0 8 8" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="icon-fill" x="3" y="0" width="2" height="8"/>
+                  <rect class="icon-fill" x="0" y="3" width="8" height="2"/>
+                </svg>
+              </span>
+            </label>
+            <div class="avatar-picker-info"><b>Tap to upload a picture.</b> Leave empty and we'll pick a random pixel-art avatar for you.</div>
+            <input type="file" id="signup-avatar-input" accept="image/png,image/jpeg,image/webp" class="hidden">
+          </div>
+        </div>
+        <div class="auth-error" id="signup-error"></div>
+        <button type="submit" class="btn btn-block" id="signup-submit-btn">SIGN UP</button>
+        <div class="auth-switch">Already have an account? <button type="button" data-auth-tab="signin">Sign in</button></div>
+      </form>
+    </div>
+
+    <!-- logged-in: account menu -->
+    <div id="auth-logged-in" class="hidden">
+      <div class="auth-header">
+        <div class="auth-header-title">YOUR ACCOUNT</div>
+      </div>
+      <div class="account-menu">
+        <div class="account-menu-avatar" id="account-menu-avatar">
+          <img id="account-menu-avatar-img" alt="">
+        </div>
+        <div class="account-menu-name" id="account-menu-name"></div>
+        <div class="account-menu-sub">Signed in to SkinMC</div>
+        <button class="btn btn-secondary btn-block" id="logout-btn">LOG OUT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="toast-top" id="toast-top"><span class="spinner"></span><span id="toast-top-text"></span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
